@@ -1,0 +1,44 @@
+{
+  "id": "urn:srcos:interaction-surface:browser-use",
+  "name": "Browser Use Surface",
+  "description": "Browser automation and browser-local keyboard interaction surface bound to the shared SourceOS/SociOS keyboard-first contracts.",
+  "surfaceType": "browser",
+  "platform": "cross-platform",
+  "modalities": [
+    "keyboard",
+    "pointer",
+    "hybrid"
+  ],
+  "focusPolicy": {
+    "owner": "local-surface",
+    "escapeBehavior": "layered-unwind",
+    "tabBehavior": "completion-first",
+    "multilineBoundaryHistory": false,
+    "arrowKeyPolicy": "caret-or-local"
+  },
+  "hostBoundaryPolicy": {
+    "nativeShortcutPolicy": "preserve",
+    "passThroughInput": true,
+    "protectedNamespaces": [
+      "browser.text-field",
+      "browser.chrome",
+      "accessibility"
+    ]
+  },
+  "commandBinding": {
+    "defaultInterpretation": "search",
+    "scopePrefix": "/",
+    "explicitCommandPrefix": ">",
+    "commandBusRef": "urn:srcos:command-bus:emvi",
+    "launcherRef": null,
+    "shortcutOverlayRef": null,
+    "keymapProfileRef": "urn:srcos:keymap-profile:mac-linux-primary"
+  },
+  "evidenceRefs": [],
+  "tags": [
+    "browser",
+    "keyboard-nav",
+    "sourceos-binding",
+    "cross-surface"
+  ]
+}
